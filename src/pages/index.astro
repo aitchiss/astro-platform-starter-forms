@@ -14,6 +14,26 @@ Any page or data can be rebuilt only when needed, without site visitors ever get
 <Layout title="Welcome to Astro.">
     <ContextAlert class="mb-4" />
     <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
     <Markdown content={explainer} class="text-lg mb-10" />
     <p class="mb-8">
         <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
